@@ -1,0 +1,4 @@
+.dropdown {
+    -webkit-appearance: menulist !important;
+    appearance: menulist !important;
+}
