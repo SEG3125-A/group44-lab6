@@ -18,3 +18,76 @@
   ![](/Docs/Images/snapshot2.png)
 
 ### 6. How to run the app:
+
+#### 1. At the root of this directory, install the dependencies specified in the package.json file:
+
+```bash
+npm install
+```
+
+#### 2. To run the app for development:
+(no settings for production in this lab unfortunately):
+
+```bash
+node app
+```
+
+### 7. Notes for development:
+
+* Create package.json file
+
+```bash
+npm init
+```
+
+* Add the following into "scripts": {}
+
+```bash
+"start": "node js/app.js",
+```
+
+* Add dependencies (install packages)
+```bash
+npm install ejs --save
+npm install body-parser --save
+npm install express --save 
+```
+
+* If place app.js in the project root directory:
+
+Use command **node app** to run the app
+
+```bash
+File package.json:
+
+{
+  "name": "group44-lab6",
+  "version": "1.0.0",
+  "description": "A survey on a website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+}
+```
+
+* If place app.js in a sub-directory: (don't forget to modify the path for **"main"** and add a property **"start"** in **"scripts"**)
+
+Use command **npm start** to run the app
+
+```bash
+File package.json:
+
+{
+  "name": "group44-lab6",
+  "version": "1.0.0",
+  "description": "A survey on a website",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "node js/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+}
+```
