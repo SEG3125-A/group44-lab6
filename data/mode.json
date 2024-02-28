@@ -1,0 +1,14 @@
+[
+    {
+        "mode": "Light",
+        "count": 3
+    },
+    {
+        "mode": "Dark",
+        "count": 4
+    },
+    {
+        "mode": "Both",
+        "count": 1
+    }
+]
