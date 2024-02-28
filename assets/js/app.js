@@ -34,7 +34,7 @@ app.set('view engine', 'ejs');
  * named 'action.js' in the 'public/assets' directory, clients can
  * access it at 'http://localhost:3000/assets/action.js'
  */
-app.use(express.static('../public'));
+app.use(express.static('./public'));
 
 // set up routes or other functionality related to surveys within the Express application(i.e. app)
 surveyController(app)

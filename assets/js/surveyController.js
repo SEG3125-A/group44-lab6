@@ -20,7 +20,7 @@ function writeData(info, fileName) {
 // update the data files
 // use "name" to be equal to age, or comment or rate... to match with the file names
 // assume we always just add 1 to a single item
-// name => key, value => value
+// name => key, value => value  (In HTML form, each input field have a name attribute)
 function combineCounts(name, value) {
     // console.log(value);
 

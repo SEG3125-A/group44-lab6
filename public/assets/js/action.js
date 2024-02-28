@@ -36,6 +36,7 @@ function processSurvey() {
         // do something with the data via front-end framework
         // Make the submit button red, disabled and saying Thank you (with the ID 'submitButton')
         $("#submitButton").css("background-color", "green");
+        $("#submitButton").css("color", "black"); // font color
         $("#submitButton").prop("disabled", "true");
         $("#submitButton").text("Thank you!");
       }
