@@ -1,1 +1,4 @@
 *.vsidx
+.vs
+.vscode
+node_modules
