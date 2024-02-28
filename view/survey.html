@@ -138,19 +138,8 @@
         </div>
        
         <p class="mt-3">Website designed by Group 44 (Andrew, Zechen, Lisa)</p>
+
+        <!-- The jQuery code to handle the form submission -->
+        <script src="/public/assets/action.js"></script>
     </body>
 </html>
-
-<script>
-    function processSurvey(event) {
-        event.preventDefault();
-        // event.stopPropagation();
-        console.log("submit clicked :)");
-    }
-
-    var fs = require('fs');
-    var form = document.getElementById('form');
-    console.log(`form.nodeType: ${form.nodeType}`);
-
-    form.addEventListener("submit", processSurvey);
-</script>
