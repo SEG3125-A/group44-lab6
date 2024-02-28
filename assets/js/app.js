@@ -1,22 +1,44 @@
-var http = require('http');
-var fs = require('fs');
-const path = require('path');
-const express = require('express');
-const app = express();
+// Entry point for the application
 
-// Static files
-app.use(express.static(path.join(__dirname, "../")));
-app.use('/css', express.static(path.join(__dirname, '../css')));
-app.use('/js', express.static(path.join(__dirname, '../js')));
+// express application
+var express = require('express');
 
-var server = http.createServer((req, res) => {
-    console.log(`Request was made: ${req.url}`);
-    res.writeHead(200, {'Content-Type': 'text/html'});
+// require the controller we make
+var surveyController = require('./surveyController');
 
-    var htmlPath = path.join(__dirname, '../index.html');
-    var myReadStream = fs.createReadStream(htmlPath, 'utf8');
-    myReadStream.pipe(res);
-});
+var app = express();
 
-server.listen(3000, '127.0.0.1');
-console.log('Now listening to port 3000');
+
+/**
+ * 'app' refers to the instance of the Express application
+ * 
+ * 'view engine': This is a key representing the view engine to 
+ * be used by Express. In this case, it's set to 'ejs'.
+ * 
+ * 'ejs': This is the value associated with the key 'view engine'. 
+ * It specifies that the application will use the EJS (Embedded JavaScript) 
+ * templating engine to render views.
+ */
+app.set('view engine', 'ejs');
+
+
+/**
+ * static file serving
+ * 
+ * The app.use middleware mounts the express.static middleware at the 
+ * root level, making all files in the public directory accessible 
+ * from the root of the server.
+ * 
+ * Clients can request static files by specifying the file path 
+ * relative to the public directory. For example, if you have a file
+ * named 'action.js' in the 'public/assets' directory, clients can
+ * access it at 'http://localhost:3000/assets/action.js'
+ */
+app.use(express.static('../public'));
+
+// set up routes or other functionality related to surveys within the Express application(i.e. app)
+surveyController(app)
+
+// listen to port
+app.listen(3000);
+console.log('The server (Express application) is now listening on port 3000')
