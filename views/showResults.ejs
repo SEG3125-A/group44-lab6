@@ -1,0 +1,67 @@
+<html lang="en-US">
+
+<head>
+    <title>
+        Survey Analysis
+    </title>
+</head>
+
+<body>
+    <h1>Survey Analysis</h1>
+
+    <h2>Countries or regions of residences</h2>
+    <ul>
+        <% for (var i=0; i<results[0].length; i++){ %>
+            <li>
+                <%= results[0][i].country_or_region %> : <%= results[0][i].count %>
+            </li>
+            <% } %>
+    </ul>
+
+    <h2>Age ranges</h2>
+    <ul>
+        <% for (var i=0; i<results[1].length; i++){ %>
+            <li>
+                <%= results[1][i].age %> : <%= results[1][i].count %>
+            </li>
+            <% } %>
+    </ul>
+
+    <h2>Modes</h2>
+    <ul>
+        <% for (var i=0; i<results[2].length; i++){ %>
+            <li>
+                <%= results[2][i].mode %> : <%= results[2][i].count %>
+            </li>
+            <% } %>
+    </ul>
+
+    <h2>Features</h2>
+    <ul>
+        <% for (var i=0; i<results[3].length; i++){ %>
+            <li>
+                <%= results[3][i].feature %> : <%= results[3][i].count %>
+            </li>
+            <% } %>
+    </ul>
+
+    <h2>Rates</h2>
+    <ul>
+        <% for (var i=0; i<results[4].length; i++){ %>
+            <li>
+                <%= results[4][i].rate %> : <%= results[4][i].count %>
+            </li>
+            <% } %>
+    </ul>
+
+    <h2>Comments</h2>
+    <ul>
+        <% for (var i=0; i<results[5].length; i++){ %>
+            <li>
+                <%= results[5][i].comment %> : <%= results[5][i].count %>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>

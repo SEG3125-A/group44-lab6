@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" src="/assets/icons/favicon.ico"/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" src="/assets/css/styles.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="/assets/js/3.5.1-jquery.min.js"></script>
+
+        <!-- Bootstrap JS -->
+        <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+    </head>
+
+
+    <body class="container">
+        <title>DLC Questionnaire</title>
+
+        <p class="h1 pt-5 mb-5">We would love your feedback!</p>
+
+        <p class="question">Let us know how you feel about the <a href="https://discoverylandco.com/">Discovery Land Company</a> website by filling out the survey below.</p>
+
+        <a href="https://discoverylandco.com/">
+            <!-- we use app.use(express.static('../public')); in app.js. We are telling Express to serve static files from the public directory, and this directory becomes the root for static files. -->
+            <!-- Since the public folder is already being served as the root. So we need to remove /public from the image source. -->
+            <img id="websiteScreenshot" src="/assets/websiteScreenshot.png" alt="Discovery Land Company Website Screenshot" height="100%" width="100%">
+        </a>
+        <div id="surveySection">
+            <form id="form" class="col-4 bg-light p-3">
+                <div class="list-group mt-3">
+                    <label for="country_or_region">
+                        Enter your country / region of residence:
+                    </label>
+                    <input class="form-control" type="country_or_region" id="country_or_region" name="country_or_region">    
+                </div>
+                <div class="list-group mt-3">
+                    <label for="age">
+                        Select your age range:
+                    </label>
+                    <select class="form-control dropdown" id="age" name="age">
+                        <option value="0-12">0-12</option>
+                        <option value="13-17">13-17</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25+">25+</option>
+                    </select>
+                </div>
+                <div class="list-group mt-3">
+                    <p>Do you use light or dark mode?</p>
+                
+                    <label for="light">
+                        <input class="form-check-input me-1" type="radio" name="mode" id="light" value="Light">
+                        Light
+                    </label>
+
+                    <label for="dark">
+                        <input class="form-check-input me-1" type="radio" name="mode" id="dark" value="Dark">                
+                        Dark
+                    </label>
+
+                    <label for="both">
+                        <input class="form-check-input me-1" type="radio" name="mode" id="both" value="Both">
+                        Both
+                    </label>
+                </div>
+                <div class="list-group mt-3">
+                    <p>Which of the following components/features of the Discovery Land Company website did you like? (Select all that apply)</p>
+
+                    <label for="hamburgerMenu">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="hamburgerMenu" value="Hamburger Menu" />
+                        Hamburger Menu
+                    </label>
+
+                    <label for="pageNavButtons">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="pageNavButtons" value="Page Navigation Buttons" />
+                        Page Navigation Buttons
+                    </label>
+
+                    <label for="scroll">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="scroll" value="Page Scrolling" />
+                        Page Scrolling
+                    </label>
+
+                    <label for="colorPalette">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="colorPalette" value="Color Palette" />
+                        Color Palette
+                    </label>
+
+                    <label for="fonts">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="fonts" value="Fonts" />
+                        Fonts
+                    </label>
+
+                    <label for="buttons">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="buttons" value="Buttons" />
+                        Buttons
+                    </label>
+
+                    <label for="photoGallery">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="photoGallery" value="Photo Gallery" />
+                        Photo Gallery
+                    </label>
+
+                    <label for="videoGallery">
+                        <input class="form-check-input me-1" type="checkbox" name="feature" id="videoGallery" value="Video Gallery in Landing Page Background" />
+                        Video Gallery in Landing Page Background
+                    </label>        
+                </div>
+                <div class="list-group mt-3">
+                    <p>Rate your overall experience using the Discovery Land Company website:</p>
+                    <label for="1">
+                        <input class="form-check-input me-1" type="radio" name="rate" id="1" value="1">
+                        1
+                    </label>
+                    <label for="2">
+                        <input class="form-check-input me-1" type="radio" name="rate" id="2" value="2">
+                        2
+                    </label>
+                    <label for="3">
+                        <input class="form-check-input me-1" type="radio" name="rate" id="3" value="3">
+                        3
+                    </label>
+                    <label for="4">
+                        <input class="form-check-input me-1" type="radio" name="rate" id="4" value="4">
+                        4
+                    </label>
+                    <label for="5">
+                        <input class="form-check-input me-1" type="radio" name="rate" id="5" value="5">
+                        5
+                    </label>
+                </div>
+                <div  class="mt-3">
+                    <p>Comments</p>
+
+                    <textarea class="w-100 form-control" name="comment" rows="5" placeholder="Enter any additional comments here..." ></textarea>        
+                </div>
+                    
+                <button id="submitButton" class="mt-3 btn btn-primary" type="submit">Submit</button>
+            </form>             
+        </div>
+       
+        <p class="mt-3">Website designed by Group 44 (Andrew, Zechen, Lisa)</p>
+
+        <!-- The jQuery code to handle the form submission -->
+        <script src="/assets/js/action.js"></script>
+    </body>
+</html>

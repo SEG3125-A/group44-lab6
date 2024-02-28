@@ -1,0 +1,34 @@
+[
+    {
+        "feature": "Hamburger Menu",
+        "count": 1
+    },
+    {
+        "feature": "Page Navigation Buttons",
+        "count": 1
+    },
+    {
+        "feature": "Page Scrolling",
+        "count": 1
+    },
+    {
+        "feature": "Color Palette",
+        "count": 1
+    },
+    {
+        "feature": "Fonts",
+        "count": 0
+    },
+    {
+        "feature": "Buttons",
+        "count": 1
+    },
+    {
+        "feature": "Photo Gallery",
+        "count": 2
+    },
+    {
+        "feature": "Video Gallery in Landing Page Background",
+        "count": 1
+    }
+]
