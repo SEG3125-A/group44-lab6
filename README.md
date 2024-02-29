@@ -29,7 +29,7 @@ npm install
 (no settings for production in this lab unfortunately):
 
 ```bash
-node app
+npm start
 ```
 
 ### 7. Notes for development:
@@ -55,7 +55,7 @@ npm install express --save
 
 * If place app.js in the project root directory:
 
-Use command **node app** to run the app
+Use the command **node app** to run the app
 
 ```bash
 File package.json:
@@ -74,7 +74,7 @@ File package.json:
 
 * If place app.js in a sub-directory: (don't forget to modify the path for **"main"** and add a property **"start"** in **"scripts"**)
 
-Use command **npm start** to run the app
+Use the command **npm start** to run the app
 
 ```bash
 File package.json:
