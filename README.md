@@ -33,8 +33,9 @@ npm start
 ```
 
 #### 3. Open the webpage using the browser:
-client-side webpage: http://127.0.0.1:3000/survey
-server-side webpage: http://127.0.0.1:3000/analysis
+* client-side webpage: http://127.0.0.1:3000/survey
+
+* server-side webpage: http://127.0.0.1:3000/analysis
 
 ### 7. Notes for development:
 
